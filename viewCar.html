@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>중고차 Shop</title>
+
+        <!-- Tailwind is included -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="./css/main.css?v=1628755089081">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#00b4b6" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130795909-1"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+
+        <div id="app">
+
+            <nav id="navbar-main" class="navbar is-fixed-top">
+                <div class="navbar-brand">
+                    <a class="navbar-item mobile-aside-button">
+                        <span class="icon fs-2"><i class="bi bi-text-indent-left"></i></span>
+                    </a>
+                    <div class="navbar-item">
+                        <div class="control">
+                            <input placeholder="차량검색" class="input">
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-brand is-right">
+                    <a class="navbar-item --jb-navbar-menu-toggle" data-target="navbar-menu">
+                        <span class="icon fs-2"><i class="bi bi-three-dots-vertical"></i></span>
+                    </a>
+                </div>
+                <div class="navbar-menu" id="navbar-menu">
+                    <div class="navbar-end">
+                        <div class="navbar-item dropdown has-divider has-user-avatar">
+                            <a class="navbar-link">
+                                <div class="user-avatar">
+                                    <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe"
+                                        class="rounded-full">
+                                </div>
+                                <div class="is-user-name"><span>관리자</span></div>
+                            </a>
+                        </div>
+                        <a title="Login" href="./login.html" class="navbar-item has-divider desktop-icon-only">
+                            <span class="icon"><i class="bi bi-people-fill"></i></span>
+                            <span>Login</span>
+                        </a>
+                        <a title="Log out" class="navbar-item desktop-icon-only">
+                            <span class="icon"><i class="bi bi-box-arrow-right"></i></span>
+                            <span>Log out</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+    
+            <aside class="aside is-placed-left is-expanded">
+                <div class="aside-tools">
+                    <div>
+                        중고차 <b class="font-black">프로토타입</b>
+                    </div>
+                </div>
+                <div class="menu is-menu-main">
+                    <ul class="menu-list">
+                        <li>
+                            <a href="./index.html">
+                                <span class="icon"><i class="bi bi-house-door"></i></span>
+                                <span class="menu-item-label">홈</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="menu-list">
+                        <li class="active">
+                            <a href="./carList.html">
+                                <span class="icon"><i class="bi bi-search"></i></span>
+                                <span class="menu-item-label">매물보기</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown">
+                                <span class="icon"><i class="bi bi-clipboard"></i></span>
+                                <span class="menu-item-label">관리자메뉴</span>
+                                <span class="icon"><i class="bi bi-plus"></i></span>
+                            </a>
+                            <ul>
+                                <li class="--set-active-tables-html">
+                                    <a href="./myRegistrationCar.html">
+                                        <span class="icon"><i class="bi bi-pen"></i></span>
+                                        <span class="menu-item-label">매물등록</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="--set-active-tables-html">
+                            <a href="./login.html">
+                                <span class="icon"><i class="bi bi-people-fill"></i></span>
+                                <span class="menu-item-label">로그인</span>
+                            </a>
+                        </li>
+                        <li class="--set-active-forms-html">
+                            <a href="#" onclick="javascript:(function(){alert('페이지 없음')})();">
+                                <span class="icon"><i class="bi bi-person-plus"></i></span>
+                                <span class="menu-item-label">회원가입</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="is-hero-bar">
+                <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+                    <h1 class="title">
+                        2007 Ssangyong Rexton II 4WD/Sunroof/wheel good/clean
+                    </h1>
+                </div>
+            </section>
+
+            <section class="section main-section">
+                <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 mb-6">
+                    <div class="card">
+                        <div class="card-content">
+                            <ul class="bxslider">
+                                <li><a href="#"><img src="./img/3.jpg" style="height: 100%; width: 100%;"></a></li>
+                                <li><a href="#"><img src="./img/6.jpg" style="height: 100%; width: 100%;"></a></li>
+                                <li><a href="#"><img src="./img/9.jpg" style="height: 100%; width: 100%;"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <table class="viewCar-table">
+                                <tbody>
+                                    <tr>
+                                        <th>형태</th>
+                                        <td data-label="형태">신품</td>
+                                        <th>매물종류</th>
+                                        <td data-label="매물종류">자동차</td>
+                                    </tr>
+                                    <tr>
+                                        <th>연식</th>
+                                        <td data-label="연식">2014</td>
+                                        <th>제조사</th>
+                                        <td data-label="제조사">쌍용</td>
+                                    </tr>
+                                    <tr>
+                                        <th>모델</th>
+                                        <td data-label="모델">렉스톤</td>
+                                        <th>세부모델</th>
+                                        <td data-label="세부모델">렉스톤2 4륜구동</td>
+                                    </tr>
+                                    <tr>
+                                        <th>등급</th>
+                                        <td data-label="등급">1등급</td>
+                                        <th>차종</th>
+                                        <td data-label="차종">SUV</td>
+                                    </tr>
+                                    <tr>
+                                        <th>차대번호</th>
+                                        <td data-label="차대번호" colspan="3">14루 6296</td>
+                                    </tr>
+                                    <tr>
+                                        <th>배기량</th>
+                                        <td data-label="배기량">5000cc</td>
+                                        <th>승차가능인원</th>
+                                        <td data-label="승차가능인원">5명</td>
+                                    </tr>
+                                    <tr>
+                                        <th>핸들</th>
+                                        <td data-label="핸들">LHD</td>
+                                        <th>문개수</th>
+                                        <td data-label="문개수">4개</td>
+                                    </tr>
+                                    <tr>
+                                        <th>변속기</th>
+                                        <td data-label="변속기">7단 자동</td>
+                                        <th>외장컬러</th>
+                                        <td data-label="외장컬러">회색</td>
+                                    </tr>
+                                    <tr>
+                                        <th>연료종류</th>
+                                        <td data-label="연료종류">경유</td>
+                                        <th>구동방식</th>
+                                        <td data-label="구동방식">4륜</td>
+                                    </tr>
+                                    <tr>
+                                        <th>실린더갯수</th>
+                                        <td data-label="실린더갯수">8개</td>
+                                        <th>마력</th>
+                                        <td data-label="마력">3000마력</td>
+                                    </tr>
+                                    <tr>
+                                        <th>엔진번호</th>
+                                        <td data-label="엔진번호">5615325</td>
+                                        <th>최초등록일</th>
+                                        <td data-label="최초등록일">2011.03.12</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-6">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            특이사항
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        갑자기 삽질을 너무 많이하면 허리가 아프니 평소 운동을 자주 해야겠습니다.
+                    </div>
+                </div>
+
+                <div class="card mb-6">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            하부상태
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <table class="viewCar-table">
+                            <tbody>
+                                <tr>
+                                    <th>부식정도</th>
+                                    <td data-label="부식정도" class="progress-cell" colspan="3">
+                                        <progress max="100" value="75"></progress>
+                                        25%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>구멍뚫림</th>
+                                    <td data-label="구멍뚫림" colspan="3">
+                                        <span class="icon red">
+                                            <i class="bi bi-x-lg"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>떨어져나감</th>
+                                    <td data-label="떨어져나감" colspan="3">
+                                        <span class="icon red">
+                                            <i class="bi bi-exclamation-circle-fill"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>브레이크</th>
+                                    <td data-label="브레이크">
+                                        <span class="icon red">
+                                            <i class="bi bi-x-lg"></i>
+                                        </span>
+                                    </td>
+                                    <th>엔진</th>
+                                    <td data-label="엔진">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>히터</th>
+                                    <td data-label="브레이크">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                    <th>변속기</th>
+                                    <td data-label="엔진">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>윈도우</th>
+                                    <td data-label="윈도우">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                    <th>에어컨</th>
+                                    <td data-label="에어컨">
+                                        <span class="icon red">
+                                            <i class="bi bi-x-lg"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>오디오</th>
+                                    <td data-label="오디오">
+                                        <span class="icon red">
+                                            <i class="bi bi-x-lg"></i>
+                                        </span>
+                                    </td>
+                                    <th>4륜작동</th>
+                                    <td data-label="4륜작동">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            안전장치
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <table class="viewCar-table">
+                            <tbody>
+                                <tr>
+                                    <th>운전석에어백</th>
+                                    <td data-label="운전석에어백">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                    <th>조수석에어백</th>
+                                    <td data-label="조수석에어백">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>무릎에어백</th>
+                                    <td data-label="무릎에어백">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                    <th>후방카메라</th>
+                                    <td data-label="후방카메라">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>사각지대경고장치(BSD)</th>
+                                    <td data-label="사각지대경고장치(BSD)">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                    <th>스페어타이어</th>
+                                    <td data-label="스페어타이어">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>후방 감지 센서</th>
+                                    <td data-label="후방 감지 센서">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                    <th>차동제한장치</th>
+                                    <td data-label="4륜작동">
+                                        <span class="icon green">
+                                            <i class="bi bi-check2-all"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer bg-black">
+                <div class="row m-top-30 m-bottom-30">
+                    <div class="col">
+                        <h5 class="text-white">회사주소</h5>
+                        <p class="m-top-20">간단히 우리의 회사를 소개해 주세요. 김포시 위치한 회사 어쩌구 저쩌구....</p>
+                    </div>
+        
+                    <div class="col">
+                        <h5 class="text-white">회사로고</h5>
+                    </div>
+                </div>
+                <div class="main_footer m-top-20">
+                    <div class="col-xs-12 text-center">
+                        <p class="wow fadeInRight" data-wow-duration="1s">
+                            Copy right 
+                            <i class="fa fa-heart"></i>
+                            by 
+                            <a target="_blank" href="http://bootstrapthemes.co">HeoSeongTae</a> 
+                            2021. All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+            <div id="sample-modal" class="modal">
+                <div class="modal-background --jb-modal-close"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Sample modal</p>
+                    </header>
+                    <section class="modal-card-body">
+                        <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
+                        <p>This is sample modal</p>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="button --jb-modal-close">Cancel</button>
+                        <button class="button red --jb-modal-close">Confirm</button>
+                    </footer>
+                </div>
+            </div>
+
+            <div id="sample-modal-2" class="modal">
+                <div class="modal-background --jb-modal-close"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Sample modal</p>
+                    </header>
+                    <section class="modal-card-body">
+                        <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
+                        <p>This is sample modal</p>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="button --jb-modal-close">Cancel</button>
+                        <button class="button blue --jb-modal-close">Confirm</button>
+                    </footer>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scripts below are for demo only -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="./js/main.js?v=1628755089081"></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+        <script type="text/javascript" src="./js/chart.sample.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.bxslider').bxSlider({ // 클래스명 주의!
+                    mode: 'fade', // 슬라이드 모드 ('fade', 'horizontal', 'vertical' 이 있음)
+                    pager: false, // 페이지 표시 보여짐
+                    slideWidth: 840
+                });
+            });
+        </script>
+
+    </body>
+
+</html>
